@@ -1,0 +1,51 @@
+/* ProgressBars.css */
+.progress-bar {
+    position: relative;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    width: 50%; /* Adjust this value based on the progress */
+    background-color: #4caf50; /* Adjust this color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .progress-bar-checkpoint {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc; /* Adjust this color */
+    transform: translateX(-50%);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .progress-bar-checkpoint.step-1 {
+    left: 0;
+  }
+  
+  .progress-bar-checkpoint.step-2 {
+    left: 33.33%;
+  }
+  
+  .progress-bar-checkpoint.step-3 {
+    left: 66.66%;
+  }
+  
+  .progress-bar-checkpoint.step-4 {
+    left: 100%;
+  }
+  
+  .progress-bar-options {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  /* Add any other styles you need */
+  
