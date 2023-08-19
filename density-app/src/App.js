@@ -6,12 +6,16 @@ import WorkWithUs from './components/WorkWithUs';
 import PrivacyStatement from './components/PrivacyStatement';
 import ProgressBars from './components/ProgressBars';
 import Banner from './components/Banner';
+import EmotionalIntelligence from './components/EmotionalIntelligence';
+import Ahead from './components/Ahead';
 
 function App() {
   return (
     <div>
       <Navbar />
       <Banner/>
+      <EmotionalIntelligence/>
+      <Ahead/>
       <ProgressBars/>
       <PrivacyStatement/>
       <WorkWithUs/>

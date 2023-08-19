@@ -1,0 +1,46 @@
+/* Emotional Intelligence Container */
+.ei-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    background-color: #f4f4f4;
+    padding: 2rem 10%;
+    border-radius: 10px;
+  }
+  
+  /* Box Style */
+  .ei-box {
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px; /* Add border radius */
+    transition: background-color 0.3s;
+  }
+  
+  .ei-box:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Heading Box */
+  .ei-heading-box {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .ei-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Content Box */
+  .ei-content-box {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ei-content {
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
