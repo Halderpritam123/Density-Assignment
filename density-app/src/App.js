@@ -8,6 +8,8 @@ import ProgressBars from './components/ProgressBars';
 import Banner from './components/Banner';
 import EmotionalIntelligence from './components/EmotionalIntelligence';
 import Ahead from './components/Ahead';
+import Carousel from './components/Carousel';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <Navbar />
       <Banner/>
       <EmotionalIntelligence/>
+      <Carousel/>
       <Ahead/>
       <ProgressBars/>
       <PrivacyStatement/>
