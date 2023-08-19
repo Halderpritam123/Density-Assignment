@@ -16,10 +16,10 @@ const Ahead = () => {
           </div>
           <div className="md:col-span-1 flex flex-col">
             <p className="text-gray-600 mb-4">
-              A personalized pocket coach that provides bite-sized, science-driven tools to boost emotional intelligence.
+              A personalized pocket coach that provides bite-sized, science-driven tools to boost emotional intelligence.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam illo mollitia quisquam praesentium blanditiis exercitationem tempore molestiae ratione. Accusantium cum provident eius voluptatibus dicta hic quisquam mollitia corrupti ipsam fugit quaerat quam iure quia natus atque, ipsum architecto praesentium assumenda. Cupiditate quo eius omnis culpa minus consequuntur veniam sed ducimus?
             </p>
             <p className="text-gray-600">
-              Think of it as a pocket cheerleader towards a better, more fulfilling life.
+              Think of it as a pocket cheerleader towards a better, more fulfilling life.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam illo mollitia quisquam praesentium blanditiis exercitationem tempore molestiae ratione. Accusantium cum provident eius voluptatibus dicta hic quisquam mollitia corrupti ipsam fugit quaerat quam iure quia natus atque, ipsum architecto praesentium assumenda. Cupiditate quo eius omnis culpa minus consequuntur veniam sed ducimus?
             </p>
           </div>
         </div>

@@ -1,0 +1,87 @@
+/* VacancySection.css */
+
+/* Section Styles */
+.vacancy-section {
+    background-color: #f7fafc;
+    padding-right: 11%;
+    padding-left: 11%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Card Styles */
+  .vacancy-card {
+    background-color: #FCE4EC;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Hide button overflow */
+  }
+  
+  .vacancy-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Card Content Styles */
+  .vacancy-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .vacancy-info {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .vacancy-description {
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-top: 0.5rem;
+  }
+  
+  /* Button Styles */
+  .apply-button {
+    background-color: #111827;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+  
+  .apply-button:hover {
+    transform: scale(1.05) translateY(-6px);
+    opacity: 1;
+  }
+  
+  /* Apply Button Bounce Animation */
+  @keyframes buttonBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  
+  /* Apply Button Animation */
+  .animate-button {
+    animation: buttonBounce 1s infinite;
+  }
+  

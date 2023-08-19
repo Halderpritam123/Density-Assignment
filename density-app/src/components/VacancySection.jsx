@@ -1,6 +1,5 @@
 import React from 'react';
-import { useTrail, animated } from 'react-spring';
-
+import './VacancySection.css';
 const vacancies = [
   {
     title: 'Frontend Developer',
@@ -23,32 +22,25 @@ const vacancies = [
   // Add more vacancies...
 ];
 
-const VacancySection = () => {
-  const trail = useTrail(vacancies.length, {
-    from: { opacity: 0, transform: 'translateY(20px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-    delay: 300,
-  });
 
+const VacancySection = () => {
   return (
-    <section className="bg-white-100 py-12" style={{ paddingRight: '2%', paddingLeft: '2%' }}>
+    <section className="vacancy-section py-12">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-semibold mb-6">Open Vacancies</h2>
+        <h2 className="section-title">Open Vacancies</h2>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {trail.map((style, index) => (
-            <animated.div
+          {vacancies.map((vacancy, index) => (
+            <div
               key={index}
-              className="relative group bg-[#FCE4EC] rounded-md p-6 transform hover:scale-105 transition duration-300 ease-in-out px-4"
-              style={style}
+              className="vacancy-card relative group bg-[#FCE4EC] rounded-md p-6 transform hover:scale-105 transition duration-300 ease-in-out px-4 cursor-pointer animate-fade-in"
             >
-              <h3 className="text-lg font-semibold mb-2">{vacancies[index].title}</h3>
-              <p className="text-gray-600">{vacancies[index].department}</p>
-              <p className="text-gray-600">{vacancies[index].location}</p>
-              <p className="text-sm text-gray-500 mt-4">{vacancies[index].description}</p>
-              <button className="hidden bg-black text-white px-4 py-2 rounded-md absolute bottom-4 left-4 transition duration-300 ease-in-out transform hover:scale-105 group-hover:block">
+              <h3 className="vacancy-title">{vacancy.title}</h3>
+              <p className="vacancy-info">{vacancy.department} | {vacancy.location}</p>
+              <p className="vacancy-description">{vacancy.description}</p>
+              <button className="apply-button hidden absolute bottom-4 left-4 transition duration-300 ease-in-out transform opacity-0 group-hover:opacity-100 animate-button">
                 Apply Now
               </button>
-            </animated.div>
+            </div>
           ))}
         </div>
       </div>

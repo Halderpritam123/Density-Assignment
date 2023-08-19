@@ -4,7 +4,7 @@ import "./ProgressBars.css"; // Import your CSS file for styling
 const ProgressBars = () => {
   return (
     <section className="bg-gray-100 py-12 px-6 md:px-12 lg:px-20">
-      <div className="container mx-auto text-center" style={{ backgroundColor: "#E8F5E9", padding: "4%", borderRadius: "10px" }}>
+      <div className="container mx-auto text-center" style={{ backgroundColor: "#E8F5E9", paddingRight: "11%",paddingLeft:"11%", borderRadius: "10px" }}>
         <p className="text-gray-600 mt-2">
           Let your friends, family, and co-workers (anonymously) rate your social skills.
         </p>

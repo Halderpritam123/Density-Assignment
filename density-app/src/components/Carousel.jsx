@@ -1,33 +1,94 @@
-import React from 'react';
+import React, { useState } from "react";
+
+const CarouselItem = ({ emoji, heading, paragraph }) => (
+  <div className="bg-white p-4 shadow-md rounded-lg text-center">
+    <div className="text-3xl mb-2">{emoji}</div>
+    <h3 className="text-xl font-semibold mb-2">{heading}</h3>
+    <p className="text-gray-700">{paragraph}</p>
+  </div>
+);
 
 const Carousel = () => {
-  const carouselItems = [
-    { id: 1, emoji: '😀', heading: 'Card 1', content: 'This is the content of card 1.' },
-    { id: 2, emoji: '🚗', heading: 'Card 2', content: 'This is the content of card 2.' },
-    { id: 3, emoji: '🌟', heading: 'Card 3', content: 'This is the content of card 3.' },
-    { id: 4, emoji: '🎉', heading: 'Card 4', content: 'This is the content of card 4.' },
-    { id: 5, emoji: '🌈', heading: 'Card 5', content: 'This is the content of card 5.' },
-    { id: 6, emoji: '🔥', heading: 'Card 6', content: 'This is the content of card 6.' },
-    { id: 7, emoji: '🌊', heading: 'Card 7', content: 'This is the content of card 7.' },
-    { id: 8, emoji: '🌺', heading: 'Card 8', content: 'This is the content of card 8.' },
+  const dummyData = [
+    {
+      emoji: "😀",
+      heading: "Positive Attitude",
+      paragraph: "Keep a positive attitude and spread joy around you.",
+    },
+    {
+      emoji: "🌟",
+      heading: "Personal Growth",
+      paragraph: "Invest in self-improvement to unlock your full potential.",
+    },
+    {
+      emoji: "🧘",
+      heading: "Mindfulness",
+      paragraph: "Practice mindfulness to reduce stress and stay present.",
+    },
+    {
+      emoji: "🎯",
+      heading: "Goal Setting",
+      paragraph: "Set clear goals to drive your progress and achievement.",
+    },
+    {
+      emoji: "😀",
+      heading: "Positive Attitude",
+      paragraph: "Keep a positive attitude and spread joy around you.",
+    },
+    {
+      emoji: "🌟",
+      heading: "Personal Growth",
+      paragraph: "Invest in self-improvement to unlock your full potential.",
+    },
+    {
+      emoji: "🧘",
+      heading: "Mindfulness",
+      paragraph: "Practice mindfulness to reduce stress and stay present.",
+    },
+    {
+      emoji: "🎯",
+      heading: "Goal Setting",
+      paragraph: "Set clear goals to drive your progress and achievement.",
+    }
+    // Add more data items
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleItems = dummyData.slice(currentIndex, currentIndex + 4);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => Math.max(0, prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => Math.min(dummyData.length - 4, prevIndex + 1));
+  };
+
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="w-full p-4 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
-        <div className="relative overflow-hidden">
-          <div className="flex -mx-2 transition-transform duration-300 ease-in-out">
-            {carouselItems.map((item) => (
-              <div key={item.id} className="px-2 w-full sm:w-1/2 md:w-1/4">
-                <div className="bg-white p-4 rounded-lg shadow-md">
-                  <div className="text-center mb-2">{item.emoji}</div>
-                  <h3 className="text-lg font-semibold mb-1">{item.heading}</h3>
-                  <p className="text-gray-600">{item.content}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+    <div style={{ paddingLeft: "11%", paddingRight: "11%" }}>
+      <h2 className="text-4xl font-semibold text-gray-800 mb-4">
+        Before You Get Started
+      </h2>
+      <div className="flex justify-center items-center mt-10" style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+        <button
+          onClick={handlePrev}
+          className="mr-4 p-2 bg-gray-800 text-white rounded"
+          disabled={currentIndex === 0}
+        >
+          Prev
+        </button>
+        <div className="flex space-x-4 overflow-hidden">
+          {visibleItems.map((item, index) => (
+            <CarouselItem key={index} {...item} />
+          ))}
         </div>
+        <button
+          onClick={handleNext}
+          className="ml-4 p-2 bg-gray-800 text-white rounded"
+          disabled={currentIndex === dummyData.length - 4}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

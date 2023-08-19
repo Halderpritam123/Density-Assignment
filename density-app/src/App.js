@@ -10,6 +10,8 @@ import EmotionalIntelligence from './components/EmotionalIntelligence';
 import Ahead from './components/Ahead';
 import Carousel from './components/Carousel';
 
+import WorkPro from './components/WorkPro';
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <EmotionalIntelligence/>
       <Carousel/>
       <Ahead/>
+      <WorkPro/>
       <ProgressBars/>
       <PrivacyStatement/>
       <WorkWithUs/>
